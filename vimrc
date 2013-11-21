@@ -18,6 +18,7 @@ set tags=tags;
 
 " enable status bar
 set laststatus=2
+set ru
 
 " enable the default syntax
 syntax on
