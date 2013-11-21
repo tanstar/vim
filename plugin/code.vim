@@ -34,7 +34,7 @@ augroup csrc
   autocmd FileType *      set nocindent  nosmartindent
   autocmd FileType c,cpp  set cindent softtabstop=2 shiftwidth=2 tabstop=2
                           set expandtab smarttab textwidth=80 
-  			  set cinoptions=:0,g0,(0,Ws,l1
+                          set cinoptions=:0,g0,(0,Ws,l1
   autocmd FileType python set nocindent nosmartindent softtabstop=4 shiftwidth=4
                           set tabstop=4 expandtab smarttab textwidth=80 
   autocmd FileType make   set noexpandtab nosmarttab
