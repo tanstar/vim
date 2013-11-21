@@ -18,3 +18,14 @@ set tags=tags;
 
 " enable status bar
 set laststatus=2
+
+" enable the default syntax
+syntax on
+
+" enable filetype indent
+filetype indent on
+
+" enable smark indent
+set smartindent
+set smarttab
+
