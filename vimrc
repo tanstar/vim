@@ -30,3 +30,15 @@ filetype indent on
 set smartindent
 set smarttab
 
+set complete+=k
+autocmd FileType tex,plaintex set spell
+highlight clear SpellBad
+highlight SpellBad cterm=underline
+highlight clear SpellCap
+highlight SpellCap cterm=underline
+highlight clear SpellRare
+highlight SpellRare cterm=underline
+highlight clear SpellLocal
+highlight SpellLocal cterm=underline
+
+set title

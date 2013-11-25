@@ -11,14 +11,18 @@ filetype on
 " Highlight syntax in programming languages
 syntax on
 
-" Highlight trailing whitespace and lines longer than 80 columns.
-highlight LongLine ctermbg=DarkYellow guibg=DarkYellow
-highlight WhitespaceEOL ctermbg=DarkYellow guibg=DarkYellow
-
 " Lines longer than 80 columns.
 au BufWinEnter * let w:m0=matchadd('LongLine', '\%>80v.\+', -1)
-au InsertEnter * syntax match WhitespaceEOL /\s\+\%#\@<!$/
-au InsertLeave * syntax match WhitespaceEOL /\s\+$/
+au BufWinEnter * match WhitespaceEOL /\s\+\%#\@<!$/
+au InsertEnter * match WhitespaceEOL /\s\+\%#\@<!$/
+au InsertLeave * match WhitespaceEOL /\s\+$/
+
+" Highlight trailing whitespace and lines longer than 80 columns.
+highlight LongLine ctermbg=DarkYellow
+highlight WhitespaceEOL ctermbg=DarkYellow
+
+nmap <F7> :highlight LongLine ctermbg=None <cr>
+nmap <F8> :highlight WhitespaceEOL ctermbg=None <cr>
 
 " Add and delete spaces in increments of `shiftwidth' for tabs
 set smarttab
